@@ -1,6 +1,7 @@
-<%= form_with model: @list do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control' %>
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name %>
+
+  <%= f.input :photo, as: :file %>
 
   <%= f.submit "Submit", class: 'btn btn-primary mt-2' %>
 <% end %>
