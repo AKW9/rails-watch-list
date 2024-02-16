@@ -1,4 +1,12 @@
+<div class="banner">
+  <%= cl_image_tag @list.photo.key, height: 200, width: 300, crop: :fill %>
+  <div class="container">
+    <h1><%= @list.name.capitalize %></h1>
+  </div>
+</div>
 <div>
-  <h1><%= @list.name %></h1>
-  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+  <% @list.bookmarks.each do |bookmark| %>
+    <%= bookmark.movie.title %>
+    <%= bookmark.comment %>
+  <% end %>
 </div>

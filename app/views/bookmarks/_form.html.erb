@@ -1,5 +1,5 @@
-<%= simple_form_for @list.bookmarks do |f| %>
+<%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.input :comment %>
-
+  <%= f.association :movie %>
   <%= f.submit "Submit", class: 'btn btn-primary mt-2' %>
 <% end %>

@@ -10,7 +10,7 @@
   <div class="card-product">
     <img src= '<%= cl_image_path list.photo.key %>' />
     <div class="card-product-infos">
-      <h2><%= link_to list.name, list_path(list), class: 'text-decoration-none text-black' %></h2>
+      <h2><%= link_to list.name.capitalize, list_path(list), class: 'text-decoration-none text-black' %></h2>
       <%= link_to "Add to bookmark", new_list_bookmark_path(list), class: 'btn btn-flat text-decoration-none text-white'  %>
     </div>
   </div>
